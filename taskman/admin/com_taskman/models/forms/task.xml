@@ -34,8 +34,8 @@
                         description="COM_TASKMAN_TASKMAN_ASSIGNEE_DESC"
                         default=""
                         required="true">
-                        <option value="1">BALA</option>
-						<option value="0">SANJEEV</option> </field>
+                        <option value="1">varun</option>
+						<option value="0">ramanna</option> </field>
                        
                <field
                         name="company"

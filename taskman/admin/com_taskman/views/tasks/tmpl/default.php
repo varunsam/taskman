@@ -171,7 +171,12 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
                         <?php echo $item->title; ?>
                 </td>
                 <td>
-                        <?php echo $item->notes; ?>
+                     <div class="blank">
+                     <a rel="{handler:'iframe',size:{X:800,y:450}}"
+                     href="index.php?option=com_taskman&view=task&task_id=<?php echo $item->task_id;?>&tmpl=component"
+                title="view task" class="btn">Click to view</a>
+                
+                     </div>
                 </td>
                  <td>
                         <?php echo $item->assignee; ?>

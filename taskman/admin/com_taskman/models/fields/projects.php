@@ -16,7 +16,7 @@ class JFormFieldProjects extends JFormFieldList
          *
          * @var         string
          */
-        protected $type = 'company';
+        protected $type = 'projects';
  
         /*
          * Method to get a list of options for a list input.
@@ -33,6 +33,8 @@ class JFormFieldProjects extends JFormFieldList
                 $query->where('state=1');
                 $db->setQuery((string)$query);
                 $messages = $db->loadObjectList();
+                
+       
                 $options = array();
                 if ($messages)
                 {
