@@ -59,7 +59,19 @@ class TaskManViewTasks extends JViewLegacy
 			'filter_state',
 			JHtml::_('select.options', JHtml::_('jgrid.publishedOptions'), 'value', 'text', $this->state->get('filter.state'), true)
 		);
-                     
+
+		$options = Array();
+		// generates a <option value="arg1">text-arg2</option>
+		$options[] = JHtml::_('select.option','dt' ,'dt');
+		$options[] = JHtml::_('select.option','s' ,'s');
+		
+		JHtmlSidebar::addFilter(
+				JText::_('TASKMAN_SELECT_TITLE'),
+				'filter_title',
+				JHtml::_('select.options',$options , 'value', 'text', $this->state->get('filter.title'), true)
+		);
+		
+		
         }
         
         
