@@ -23,4 +23,15 @@ class TaskManControllerTask extends JControllerForm
 		echo $post['duedate'];
 		exit;
 
-}
+	} 
+	function saveText(){
+		$post=JRequest::get('post');
+		$model=$this->getModel();
+		$row=$model->getTable();
+		$row->load($post['task_id']);
+		$row->assignee=$post['assignee'];
+		$row->store();
+		echo $post['assignee'];
+		exit;
+	}
+	}
